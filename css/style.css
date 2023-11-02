@@ -526,6 +526,10 @@ video {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
+  
+}
+.trending .items{
+  padding: 5px;
 }
 .Customer .container {
   max-width: 70%;
