@@ -717,3 +717,21 @@ footer label {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.box2{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.location{
+  display: flex;
+  
+  
+}
+.phone{
+  margin-left: -140px;
+  margin-top: 0px;
+}
+.email{
+  margin-left: -80px;
+}
