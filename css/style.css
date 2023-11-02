@@ -298,6 +298,28 @@ h1 {
 .about .heading h1 {
   top: 55px;
 }
+/* Style for the active state */
+
+
+/* Other styles for navigation links */
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  display: inline-block;
+}
+#menulist a.active {
+  color: rgb(136, 255, 0); /* Change the color to your desired style */
+  font-weight: bold; /* Add any additional styles for the active state */
+}
+
+/* Style for the entire navigation bar (optional) */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 
 .image {
   width: 400px;
