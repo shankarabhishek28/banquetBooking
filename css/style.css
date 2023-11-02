@@ -488,6 +488,7 @@ nav ul {
   font-weight: 500;
 }
 .item {
+  margin-top: 11px;
   background-color: #000;
   position: relative;
   overflow: hidden;
