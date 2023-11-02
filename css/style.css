@@ -14,6 +14,13 @@ h1, h2 {
   font-family: sans-serif;
   font-weight: 400;
 }
+.logo img{
+ position: relative;
+ 
+ height: 120px;
+ width: 220px;
+ margin-top:-8px ;
+}
 
 a {
   text-decoration: none;
@@ -23,6 +30,19 @@ li {
   list-style: none;
 }
 
+.fa-search {
+  animation: spin 2s infinite linear;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fa-search:hover {
+  animation: none; /* Stop the spinning animation on hover */
+}
 .flex {
   display: flex;
 }
@@ -66,6 +86,9 @@ header {
   line-height: 10vh;
   padding: 0 20px;
 }
+.navlinks{
+  margin-top: 15px;
+}
 
 header img {
   margin: 20px 0;
@@ -83,7 +106,7 @@ header ul li {
 header ul li a {
   color: #000;
   margin: 0 10px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 header ul li a:hover {
@@ -137,16 +160,21 @@ header .navlinks span {
   }
 }
 
+
 /*--------header---------*/
 /*--------home---------*/
 .home {
+  position: relative;
   height: 100vh;
   color: #fff;
+  
 }
 
-.home img {
-  width: 100%;
-  height: 100vh;
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
 }
 
 .home .text {
@@ -202,11 +230,19 @@ input {
 }
 
 .book {
+  position: relative;
   padding: 40px 0;
   background: #282834;
   color: #fff;
 }
-
+.img{
+  width: 400px;
+  height: 250px;
+}
+.img img{
+  width: 100%;
+  height: 100%;
+}
 h1 {
   font-family: serif;
 }
@@ -263,6 +299,14 @@ h1 {
   top: 55px;
 }
 
+.image {
+  width: 400px;
+  height: 290px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
 .about {
   position: relative;
 }
@@ -310,30 +354,30 @@ h1 {
 }
 
 /*--------counter---------*/
-/*--------rooms---------*/
-.rooms {
+/*--------halls---------*/
+.halls {
   position: relative;
 }
 
-.rooms .text {
+.halls .text {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: none;
   padding: 30px;
 }
 
-.rooms i {
+.halls i {
   font-size: 12px;
   color: #fbb234;
   margin: 15px 0;
   margin-right: 5px;
 }
 
-.rooms p {
+.halls p {
   margin: 20px 0;
   opacity: 0.7;
 }
 
-.rooms h3 {
+.halls h3 {
   font-size: 30px;
   line-height: 20px;
   margin-left: 20px;
@@ -341,7 +385,7 @@ h1 {
   color: #7fc142;
 }
 
-.rooms h3 span {
+.halls h3 span {
   font-size: 15px;
   font-weight: 400;
   color: #000;
@@ -369,7 +413,7 @@ h1 {
   right: 0;
 }
 
-/*--------rooms---------*/
+/*--------halls---------*/
 /*--------gallery---------*/
 .gallery {
   position: relative;
@@ -421,7 +465,18 @@ h1 {
   margin-top: 20px;
   font-weight: 500;
 }
+.item {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
 
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.5;
+}
 .gallery .items:hover .overlay,
 .gallery .items:hover .img::after {
   opacity: 1;
@@ -453,54 +508,12 @@ h1 {
   grid-gap: 30px;
 }
 
-.services .left {
-  padding: 30px 0;
-}
 
-.services .box {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: 0.5s;
-  padding: 20px;
-}
-
-.services .box .text {
-  padding: 30px 0;
-  border: 1px dashed #fff;
-}
-
-.services i {
-  font-size: 50px;
-  color: #7fc142;
-  transition: 0.5s;
-}
-
-.services h3 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 20p;
-  transition: 0.5s;
-}
-
-.services img {
-  width: 100%;
-  height: 100%;
-}
-
-.services .box:hover {
-  background: #7fc142;
-  color: #fff;
-  cursor: pointer;
-}
-
-.services .box:hover i,
-.services .box:hover h3 {
-  color: #fff;
-}
 
 /*--------services---------*/
 /*--------Customer---------*/
 .Customer {
+  
   background-image: url("../images/background-2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -509,7 +522,11 @@ h1 {
   color: #fff;
   text-align: center;
 }
+.trending{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
+}
 .Customer .container {
   max-width: 70%;
 }
@@ -566,102 +583,10 @@ h1 {
 }
 
 /*--------Customer---------*/
-/*--------news---------*/
-.news {
-  position: relative;
-}
 
-.news i {
-  color: #7fc142;
-  text-transform: capitalize;
-  font-size: 18px;
-}
 
-.news label {
-  margin-top: 12px;
-  margin-right: 20px;
-}
 
-.news .left {
-  padding: 30px 0;
-  width: 65%;
-}
 
-.news .right {
-  width: 35%;
-}
-
-.news img {
-  width: 100%;
-}
-
-.news .items p {
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.news .box {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 40px 0;
-}
-
-.news .box:nth-child(1) {
-  padding-top: 0;
-}
-
-.news .box:nth-last-child(1) {
-  border-bottom: none;
-}
-
-.news .box img {
-  width: 110px;
-  height: 114px;
-}
-
-.news .stext {
-  padding: 0 0 0 20px;
-}
-
-/*--------news---------*/
-/*--------newsletter---------*/
-.newsletter {
-  position: relative;
-}
-
-.newsletter .container {
-  background: #7fc142;
-  padding: 40px 30px;
-  position: absolute;
-  top: -70px;
-  left: 8%;
-  width: 100%;
-}
-
-.newsletter h1 {
-  width: 100%;
-  font-size: 30px;
-  color: #fff;
-  margin-top: 10px;
-}
-
-.newsletter input {
-  padding: 20px;
-}
-
-.newsletter input:nth-last-child(2) {
-  width: 80%;
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.newsletter input:nth-last-child(1) {
-  margin-left: 20px;
-  width: 30%;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-/*--------newsletter---------*/
 /*--------footer---------*/
 footer {
   background: #282834;
@@ -751,8 +676,8 @@ footer label {
     left: 75%;
   }
 
-  .rooms .owl-nav .owl-prev,
-  .rooms .owl-nav .owl-next {
+  .halls .owl-nav .owl-prev,
+  .halls .owl-nav .owl-next {
     top: -30%;
   }
 
@@ -778,44 +703,7 @@ footer label {
     left: 44.5%;
   }
 
-  .news .content.flex {
-    flex-direction: column;
-  }
 
-  .news .left {
-    padding: 30px 0;
-    width: 100%;
-  }
-
-  .news .right {
-    width: 100%;
-  }
-
-  .newsletter {
-    position: relative;
-    background: #7fc142;
-  }
-
-  .newsletter .container {
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 30px;
-    position: relative;
-  }
-
-  .newsletter .flex_space {
-    flex-direction: column;
-  }
-
-  .newsletter input:nth-last-child(2) {
-    margin: 20px 0;
-    width: 100%;
-  }
-
-  .newsletter input:nth-last-child(1) {
-    margin: 0;
-  }
 
   footer .grid {
     grid-template-columns: repeat(1, 1fr);
