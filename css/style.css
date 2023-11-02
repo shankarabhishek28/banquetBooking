@@ -299,18 +299,7 @@ h1 {
   top: 55px;
 }
 /* Style for the active state */
-.items {
 
-  transition: background-color 0.3s ease;
-}
-
-.items:hover {
-  background-color: rgb(210, 210, 208);
-}
-
-.items:hover{
-  background-color:rgb(210, 210, 208) ;
-}
 /* Other styles for navigation links */
 nav a {
   text-decoration: none;
@@ -336,7 +325,8 @@ nav ul {
   height: 290px;
 }
 .image img {
-  width: 105%;
+  padding: 2px;
+  width: 100%;
   height: 100%;
 }
 .about {
@@ -558,6 +548,22 @@ video {
   color: #fff;
   text-align: center;
 }
+.trending .items {
+  perspective: 500px; 
+
+
+  transition: transform 0.3s ease;
+}
+
+.trending .items:hover {
+  border: 2px solid rgb(136, 255, 1);
+  transform: scale(1.05) perspective(500px);
+}
+
+
+
+
+
 .trending{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -565,7 +571,20 @@ video {
   
 }
 .trending .items{
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.trending .items .text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
 }
 .Customer .container {
   max-width: 70%;
