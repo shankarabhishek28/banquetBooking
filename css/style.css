@@ -299,8 +299,18 @@ h1 {
   top: 55px;
 }
 /* Style for the active state */
+.items {
 
+  transition: background-color 0.3s ease;
+}
 
+.items:hover {
+  background-color: rgb(210, 210, 208);
+}
+
+.items:hover{
+  background-color:rgb(210, 210, 208) ;
+}
 /* Other styles for navigation links */
 nav a {
   text-decoration: none;
@@ -326,7 +336,7 @@ nav ul {
   height: 290px;
 }
 .image img {
-  width: 100%;
+  width: 105%;
   height: 100%;
 }
 .about {
