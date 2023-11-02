@@ -82,9 +82,11 @@ button {
 
 /*--------header---------*/
 header {
+  position: relative;
   height: 10vh;
   line-height: 10vh;
   padding: 0 20px;
+  margin-bottom: 5px;
 }
 .navlinks{
   margin-top: 15px;
@@ -488,7 +490,8 @@ nav ul {
   font-weight: 500;
 }
 .item {
-  margin-top: 11px;
+  
+  margin-top: 25px;
   background-color: #000;
   position: relative;
   overflow: hidden;
